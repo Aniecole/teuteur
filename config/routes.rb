@@ -1,9 +1,20 @@
 Teuteur::Application.routes.draw do
-  get "pages/about"
-
+	
   get "pages/home"
+  
+  get "users/new"
+  
+  get "pages/signup", :to => 'users#new'
+  
+  get "pages/about" , :to => 'pages#about'
 
-  get "pages/contact"
+  get "pages/contact" , :to => 'pages#contact' 
+   
+  get "pages/help", :to => 'pages#help' 
+  
+    root :to => 'pages#home' 
+  
+     
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
